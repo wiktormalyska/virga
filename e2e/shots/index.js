@@ -206,7 +206,7 @@ async function snippetChecks(ws, classFile) {
 async function run() {
   try {
     await sleep(1500);
-    const ext = vscode.extensions.getExtension('wiktormalyska.virga');
+    const ext = vscode.extensions.getExtension('WiktorMayska.virga');
     check('extension found', !!ext);
     const api = await ext.activate();
     const ws = vscode.workspace.workspaceFolders[0].uri.fsPath;

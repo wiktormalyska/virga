@@ -376,7 +376,7 @@ async function packSnippetsStep() {
     return;
   }
   const info = JSON.parse(fs.readFileSync(infoFile, 'utf8'));
-  const ext = vscode.extensions.getExtension('wiktormalyska.virga');
+  const ext = vscode.extensions.getExtension('WiktorMayska.virga');
   const own = {}; // language -> prefix -> how many Virga snippets carry it
   for (const s of ext.packageJSON.contributes.snippets) {
     const file = JSON.parse(fs.readFileSync(path.join(ext.extensionPath, s.path), 'utf8'));
@@ -1143,7 +1143,7 @@ async function multiB2() {
 
 async function run() {
   await sleep(1000);
-  const ext = vscode.extensions.getExtension('wiktormalyska.virga');
+  const ext = vscode.extensions.getExtension('WiktorMayska.virga');
   check('extension found', !!ext);
   api = await ext.activate();
   ws = vscode.workspace.workspaceFolders[0].uri.fsPath;

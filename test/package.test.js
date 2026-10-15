@@ -19,7 +19,7 @@ const test = (name, fn) => tests.push({ name, fn });
 
 test('manifest: identity, links and marketplace fields', () => {
   assert.equal(pkg.name, 'virga');
-  assert.equal(`${pkg.publisher}.${pkg.name}`, 'wiktormalyska.virga');
+  assert.equal(`${pkg.publisher}.${pkg.name}`, 'WiktorMayska.virga');
   assert.equal(pkg.displayName, 'Virga: Apex Scratch & Quick Fixes');
   assert.equal(pkg.description, "Write some Apex or SOQL, press Ctrl+S to run it, then close the tab and it's gone. Completion for local types, quick fixes and Apex snippets. Works with Salesforce CLI and the Salesforce Extension Pack.");
   assert.equal(pkg.version, '0.1.0');

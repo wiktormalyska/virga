@@ -1,6 +1,6 @@
 # Publishing checklist
 
-For the maintainer. Extension id `wiktormalyska.virga`, repository
+For the maintainer. Extension id `WiktorMayska.virga`, repository
 `https://github.com/wiktormalyska/virga`. Do the steps in this order: the
 README's images are served from the GitHub repository, so it must exist and be
 public before the Marketplace shows the page.
@@ -39,7 +39,7 @@ publish with a Microsoft Entra ID sign-in instead of a PAT.
 
 - [ ] Sign in at <https://marketplace.visualstudio.com/manage> with the
       Microsoft account that will own the extension.
-- [ ] Create the publisher with ID `wiktormalyska` (must match `publisher` in
+- [ ] Create the publisher with ID `WiktorMayska` (done 2026-10-15; IDs cannot be changed, it must match `publisher` in
       `package.json`), display name `Wiktor Małyska`.
 - [ ] Make sure the same Entra ID identity is a member of the publisher with
       the Owner or Contributor role.
@@ -50,7 +50,7 @@ publish with a Microsoft Entra ID sign-in instead of a PAT.
 - [ ] Sign in at <https://open-vsx.org> with GitHub, link an Eclipse
       Foundation account and accept the Publisher Agreement.
 - [ ] Create an access token in the Open VSX user settings.
-- [ ] `npx --yes ovsx create-namespace wiktormalyska -p <token>`
+- [ ] `npx --yes ovsx create-namespace WiktorMayska -p <token>`
 - [ ] Optional: ask for the namespace to be verified (owner badge) as the Open
       VSX documentation describes.
 
@@ -69,7 +69,7 @@ publish with a Microsoft Entra ID sign-in instead of a PAT.
 - [ ] The Marketplace page shows the icon, the three screenshots and the
       trademark note at the end of the README.
 - [ ] Install from the Marketplace in a clean profile
-      (`code --profile virga-check --install-extension wiktormalyska.virga`)
+      (`code --profile virga-check --install-extension WiktorMayska.virga`)
       and run a scratch once.
 - [ ] Same check on Open VSX (for example in VSCodium).
 

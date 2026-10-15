@@ -3,7 +3,7 @@
   "displayName": "Virga: Apex Scratch & Quick Fixes",
   "description": "Write some Apex or SOQL, press Ctrl+S to run it, then close the tab and it's gone. Completion for local types, quick fixes and Apex snippets. Works with Salesforce CLI and the Salesforce Extension Pack.",
   "version": "0.1.0",
-  "publisher": "wiktormalyska",
+  "publisher": "WiktorMayska",
   "author": {
     "name": "Wiktor Małyska"
   },

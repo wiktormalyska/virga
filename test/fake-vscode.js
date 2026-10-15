@@ -419,7 +419,7 @@ function createFakeVscode(root) {
  * `logPath` is the host's context.logUri, which names its window:
  * <user data>/logs/<session>/window<N>/exthost/<extension id>.
  */
-function loadExtension(root, { before, logPath = path.join(root, '.dev-logs', 'logs', '20261014T120000', 'window1', 'exthost', 'wiktormalyska.virga'), globalState = new Map() } = {}) {
+function loadExtension(root, { before, logPath = path.join(root, '.dev-logs', 'logs', '20261014T120000', 'window1', 'exthost', 'WiktorMayska.virga'), globalState = new Map() } = {}) {
   const vscode = createFakeVscode(root);
   if (before) before(vscode);
   const orig = Module._load;

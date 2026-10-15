@@ -790,7 +790,7 @@ test('package.json: manifest fields, commands registered, files shipped', () => 
   const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
   assert.equal(pkg.name, 'virga');
   assert.equal(pkg.displayName, 'Virga: Apex Scratch & Quick Fixes');
-  assert.equal(pkg.publisher, 'wiktormalyska');
+  assert.equal(pkg.publisher, 'WiktorMayska');
   assert.equal(pkg.version, '0.1.0');
   assert.equal(pkg.engines.vscode, '^1.90.0');
   assert.equal(pkg.main, './extension.js');
@@ -1513,7 +1513,7 @@ test('extension: another live window\'s scratch is never deleted; a dead window\
 const LOGS = path.join(EXT_ROOT, '.dev-logs', 'logs');
 const NOW_SESSION = '20261014T120000';
 const OLD_SESSION = '20261014T110000';
-const hostLog = (session, window, logs = LOGS) => path.join(logs, session, window, 'exthost', 'wiktormalyska.virga');
+const hostLog = (session, window, logs = LOGS) => path.join(logs, session, window, 'exthost', 'WiktorMayska.virga');
 const scratchTabNames = (vscode, dir) => vscode.window.tabGroups.all.flatMap((g) => g.tabs).map((t) => t.input.uri.fsPath).filter((f) => lib.isScratchFile(f, dir)).map((f) => path.basename(f)).sort();
 const scratchFilesIn = (dir) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((n) => lib.SCRATCH_FILE.test(n)).sort() : []);
 
@@ -1987,7 +1987,7 @@ test('extension: a window closed and opened again in the same VS Code session ta
 
 test('owners: the window comes from the host\'s log folder and names its owner file; the next host of the same window writes the same file', () => {
   const logs = path.join('C:\\Users\\u\\AppData\\Roaming\\Code', 'logs');
-  const id = lib.hostIdentity(path.join(logs, '20261014T212200', 'window3', 'exthost', 'wiktormalyska.virga'), 'win32');
+  const id = lib.hostIdentity(path.join(logs, '20261014T212200', 'window3', 'exthost', 'WiktorMayska.virga'), 'win32');
   assert.deepEqual(id, { logsHome: 'c:\\users\\u\\appdata\\roaming\\code\\logs', session: '20261014t212200', window: 'window3' });
   assert.deepEqual(lib.hostIdentity('/home/u/.config/Code/logs/20261014T212200/window1/exthost/x', 'linux'), { logsHome: '/home/u/.config/Code/logs', session: '20261014T212200', window: 'window1' });
   assert.equal(lib.hostIdentity('/home/u/.vscode-server/data/logs/20261014T212200/exthost1/x', 'linux'), null, 'another layout: unknown, so only the process id counts');

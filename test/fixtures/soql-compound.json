@@ -1,0 +1,29 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC001AAA"
+        },
+        "Id": "001Dm0000AbC001AAA",
+        "BillingAddress": {
+          "city": "Austin",
+          "country": "United States",
+          "countryCode": "US",
+          "geocodeAccuracy": null,
+          "latitude": null,
+          "longitude": null,
+          "postalCode": null,
+          "state": "TX",
+          "stateCode": "TX",
+          "street": "312 Constitution Place\nAustin, TX 78767\nUSA"
+        }
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}

@@ -1,0 +1,1 @@
+SELECT COUNT(Id) cnt, Industry FROM Account GROUP BY Industry

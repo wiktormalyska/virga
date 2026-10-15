@@ -1,0 +1,14 @@
+{
+  "status": 0,
+  "result": {
+    "success": true,
+    "compiled": true,
+    "compileProblem": "",
+    "exceptionMessage": "",
+    "exceptionStackTrace": "",
+    "line": -1,
+    "column": -1,
+    "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: System.debug('a & b < c > d \"q\" \\'s \\\\ back\\ttab | pipe &#124; literal');\nExecute Anonymous: System.debug(JSON.serialize(new Map<String, Object>{ 'k|1' => 'v<2>', 'html' => '<b>&amp;</b>' }));\n14:19:30.27 (27522173)|USER_INFO|[EXTERNAL]|005000000000001|user@example.com|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n14:19:30.27 (27546728)|EXECUTION_STARTED\n14:19:30.27 (27566986)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n14:19:30.27 (28224523)|USER_DEBUG|[1]|DEBUG|a & b < c > d \"q\" 's \\ back\ttab &#124; pipe &#124; literal\n14:19:30.27 (28883003)|USER_DEBUG|[2]|DEBUG|{\"html\":\"<b>&amp;</b>\",\"k&#124;1\":\"v<2>\"}\n14:19:30.28 (28977790)|CUMULATIVE_LIMIT_USAGE\n14:19:30.28 (28977790)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 0 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 0 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n14:19:30.28 (28977790)|CUMULATIVE_LIMIT_USAGE_END\n\n14:19:30.27 (29029872)|CODE_UNIT_FINISHED|execute_anonymous_apex\n14:19:30.27 (29043233)|EXECUTION_FINISHED\n"
+  },
+  "warnings": []
+}

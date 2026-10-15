@@ -1,0 +1,37 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC002AAA"
+        },
+        "Id": "001Dm0000AbC002AAA",
+        "Name": "Burlington Textiles Corp of America",
+        "Opportunities": null
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC012AAA"
+        },
+        "Id": "001Dm0000AbC012AAA",
+        "Name": "Dickenson plc",
+        "Opportunities": null
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC001AAA"
+        },
+        "Id": "001Dm0000AbC001AAA",
+        "Name": "Edge Communications",
+        "Opportunities": null
+      }
+    ],
+    "totalSize": 3,
+    "done": true
+  },
+  "warnings": []
+}

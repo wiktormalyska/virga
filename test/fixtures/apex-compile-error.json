@@ -1,0 +1,21 @@
+{
+  "name": "executeCompileFailure",
+  "message": "Compilation failed at Line 2 column 1 with the error:\n\nInvalid type: Strin",
+  "exitCode": 1,
+  "context": "Run",
+  "data": {
+    "success": false,
+    "compiled": false,
+    "compileProblem": "Invalid type: Strin",
+    "exceptionMessage": "",
+    "exceptionStackTrace": "",
+    "line": "2",
+    "column": "1",
+    "logs": ""
+  },
+  "cause": "undefined",
+  "warnings": [],
+  "code": "executeCompileFailure",
+  "status": 1,
+  "commandName": "Run"
+}

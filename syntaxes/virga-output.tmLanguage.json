@@ -1,0 +1,205 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Virga Output",
+  "scopeName": "source.virga-output",
+  "patterns": [
+    { "include": "#header" },
+    { "include": "#status" },
+    { "include": "#debug" },
+    { "include": "#stack" },
+    { "include": "#limits" },
+    { "include": "#snippet" },
+    { "include": "#caret" },
+    { "include": "#note" },
+    { "include": "#table-head" },
+    { "include": "#table-border" },
+    { "include": "#table-row" },
+    { "include": "#values" }
+  ],
+  "repository": {
+    "header": {
+      "match": "^(▶) (Apex|SOQL) (·) (.+?) (·) (\\d{1,2}:\\d{2}:\\d{2})(?: (·) (.+?))?\\s*$",
+      "name": "markup.heading.virga-output",
+      "captures": {
+        "1": { "name": "keyword.control.run.virga-output" },
+        "2": { "name": "entity.name.type.kind.virga-output" },
+        "3": { "name": "punctuation.separator.virga-output" },
+        "4": { "name": "variable.other.org.virga-output" },
+        "5": { "name": "punctuation.separator.virga-output" },
+        "6": { "name": "constant.numeric.time.virga-output" },
+        "7": { "name": "punctuation.separator.virga-output" },
+        "8": { "name": "constant.numeric.duration.virga-output" }
+      }
+    },
+    "status": {
+      "patterns": [
+        {
+          "match": "^(✔ Compiled)( +)(✔ Executed)\\s*$",
+          "captures": {
+            "1": { "name": "markup.inserted.virga-output" },
+            "3": { "name": "markup.inserted.virga-output" }
+          }
+        },
+        {
+          "match": "^(✔ Compiled)( +)(✖ .*)$",
+          "captures": {
+            "1": { "name": "markup.inserted.virga-output" },
+            "3": { "name": "markup.deleted.virga-output invalid.illegal.virga-output" }
+          }
+        },
+        { "match": "^✔.*$", "name": "markup.inserted.virga-output" },
+        { "match": "^✖.*$", "name": "markup.deleted.virga-output invalid.illegal.virga-output" },
+        { "match": "^⚠.*$", "name": "markup.changed.virga-output" }
+      ]
+    },
+    "debug": {
+      "match": "^( {2})(\\[line (?:\\d+|\\?)\\])( +)(FINEST|FINER|FINE|DEBUG|INFO|WARN|ERROR)(?:( +)(.*))?$",
+      "captures": {
+        "2": {
+          "name": "comment.line.marker.virga-output",
+          "patterns": [{ "match": "\\d+", "name": "constant.numeric.line.virga-output" }]
+        },
+        "4": {
+          "patterns": [
+            { "match": "ERROR", "name": "keyword.other.level.error.virga-output invalid.illegal.level.virga-output" },
+            { "match": "WARN", "name": "keyword.control.level.warn.virga-output" },
+            { "match": "INFO", "name": "keyword.other.level.info.virga-output support.function.level.virga-output" },
+            { "match": "DEBUG", "name": "keyword.other.level.debug.virga-output support.type.level.virga-output" },
+            { "match": "FINE(?:R|ST)?", "name": "keyword.other.level.fine.virga-output support.constant.level.virga-output" }
+          ]
+        },
+        "6": { "patterns": [{ "include": "#values" }] }
+      }
+    },
+    "stack": {
+      "match": "^( {2})(at)( )(.+?)(?:(: line )(\\d+)(, column )(\\d+))?\\s*$",
+      "captures": {
+        "2": { "name": "keyword.other.at.virga-output" },
+        "4": { "name": "entity.name.function.frame.virga-output" },
+        "5": { "name": "comment.line.virga-output" },
+        "6": { "name": "constant.numeric.virga-output" },
+        "7": { "name": "comment.line.virga-output" },
+        "8": { "name": "constant.numeric.virga-output" }
+      }
+    },
+    "limits": {
+      "match": "^( {2})(Limits)( {2})(.*)$",
+      "captures": {
+        "2": { "name": "markup.bold.virga-output keyword.other.limits.virga-output" },
+        "4": { "patterns": [{ "include": "#limit-values" }] }
+      }
+    },
+    "limit-values": {
+      "patterns": [
+        { "match": "·", "name": "punctuation.separator.virga-output comment.line.virga-output" },
+        { "match": "(\\d+)(/)(\\d+)", "captures": {
+          "1": { "name": "constant.numeric.used.virga-output" },
+          "2": { "name": "punctuation.separator.virga-output" },
+          "3": { "name": "constant.numeric.max.virga-output" }
+        } }
+      ]
+    },
+    "snippet": {
+      "match": "^( {2})(\\d+)( │ )(.*)$",
+      "captures": {
+        "2": { "name": "constant.numeric.line-number.virga-output" },
+        "3": { "name": "comment.line.gutter.virga-output punctuation.separator.gutter.virga-output" },
+        "4": { "patterns": [{ "include": "#values" }] }
+      }
+    },
+    "caret": {
+      "match": "^( {2} *)(│)( [ \\t]*)(\\^)\\s*$",
+      "captures": {
+        "2": { "name": "comment.line.gutter.virga-output punctuation.separator.gutter.virga-output" },
+        "4": { "name": "markup.deleted.virga-output invalid.illegal.caret.virga-output" }
+      }
+    },
+    "note": {
+      "patterns": [
+        { "match": "^ {2}\\((?:no debug output)\\)\\s*$", "name": "comment.line.note.virga-output" },
+        { "match": "^ {2}running…\\s*$", "name": "comment.line.note.virga-output" },
+        { "match": "^ *… .*$", "name": "comment.line.note.virga-output" },
+        { "match": "^( {10})(?=(?:CPU time|heap|[a-z][a-z ]+) \\d+/\\d+)(.*)$", "captures": { "2": { "patterns": [{ "include": "#limit-values" }] } } }
+      ]
+    },
+    "table-border": {
+      "match": "^[┌├└][─┬┼┴]*[┐┤┘]$",
+      "name": "comment.block.table.virga-output punctuation.definition.table.virga-output"
+    },
+    "table-head": {
+      "begin": "^(┌[─┬]*┐)$",
+      "beginCaptures": {
+        "1": { "name": "comment.block.table.virga-output punctuation.definition.table.virga-output" }
+      },
+      "end": "^(├[─┼]*┤)$",
+      "endCaptures": {
+        "1": { "name": "comment.block.table.virga-output punctuation.definition.table.virga-output" }
+      },
+      "patterns": [
+        { "match": "│", "name": "comment.block.table.virga-output punctuation.separator.table.virga-output" },
+        { "match": "[^│\\s](?:[^│]*[^│\\s])?", "name": "markup.bold.virga-output entity.name.tag.column.virga-output" }
+      ]
+    },
+    "table-row": {
+      "match": "^│.*│$",
+      "captures": {
+        "0": {
+          "patterns": [
+            { "match": "│", "name": "comment.block.table.virga-output punctuation.separator.table.virga-output" },
+            { "match": "\\[\\d+ rows?\\]", "name": "comment.line.subquery.virga-output" },
+            { "include": "#values" }
+          ]
+        }
+      }
+    },
+    "values": {
+      "patterns": [
+        { "include": "#record-id" },
+        { "include": "#datetime" },
+        { "include": "#number" },
+        { "include": "#language-constant" },
+        { "include": "#string" },
+        { "include": "#sobject" },
+        { "include": "#property" },
+        { "match": "[↵…]", "name": "comment.line.marker.virga-output" }
+      ]
+    },
+    "record-id": {
+      "comment": "15/18-char Salesforce Id: key prefix (digit or lower-case letter first), pod, reserved 0, record number, optional upper-case checksum; at least three digits so plain words never match, at least one letter so long numbers (amounts, phone numbers, timestamps) never match.",
+      "match": "(?<![A-Za-z0-9_])(?=[0-9]*[A-Za-z])(?=(?:[A-Za-z]*[0-9]){3})[0-9a-z][0-9A-Za-z]{4}0[0-9A-Za-z]{9}(?:[A-Z0-5]{3})?(?![A-Za-z0-9_])",
+      "name": "constant.other.record-id.virga-output variable.other.constant.record-id.virga-output"
+    },
+    "datetime": {
+      "match": "(?<![A-Za-z0-9_])\\d{4}-\\d{2}-\\d{2}(?:[T ]\\d{2}:\\d{2}(?::\\d{2}(?:\\.\\d+)?)?(?:Z|[+-]\\d{2}:?\\d{2})?)?(?![A-Za-z0-9_])",
+      "name": "constant.numeric.datetime.virga-output"
+    },
+    "number": {
+      "match": "(?<![A-Za-z0-9_.])-?\\d+(?:\\.\\d+)?(?![A-Za-z0-9_])",
+      "name": "constant.numeric.virga-output"
+    },
+    "language-constant": {
+      "match": "\\b(?:true|false|null)\\b",
+      "name": "constant.language.virga-output"
+    },
+    "string": {
+      "patterns": [
+        { "match": "(?<![A-Za-z0-9])'[^'│\\n]*'(?![A-Za-z0-9])", "name": "string.quoted.single.virga-output" },
+        { "match": "\"(?:[^\"\\\\│\\n]|\\\\.)*\"", "name": "string.quoted.double.virga-output" }
+      ]
+    },
+    "sobject": {
+      "match": "\\b([A-Z][A-Za-z0-9_]*)(:)(?=\\{)",
+      "captures": {
+        "1": { "name": "entity.name.type.sobject.virga-output" },
+        "2": { "name": "punctuation.separator.virga-output" }
+      }
+    },
+    "property": {
+      "match": "(?<=[{(,]|, )([A-Za-z_][A-Za-z0-9_.]*)(=)",
+      "captures": {
+        "1": { "name": "variable.other.property.virga-output" },
+        "2": { "name": "keyword.operator.assignment.virga-output" }
+      }
+    }
+  }
+}

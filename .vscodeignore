@@ -1,0 +1,17 @@
+**
+!package.json
+!extension.js
+!src/scratch/extension.js
+!src/scratch/lib.js
+!src/local-types/extension.js
+!src/local-types/lib.js
+!syntaxes/virga-output.tmLanguage.json
+!snippets/apex.code-snippets
+!snippets/soql.code-snippets
+!images/icon.png
+!images/scratch-run.png
+!images/local-type-completion.png
+!images/raw-list-quick-fix.png
+!LICENSE
+!README.md
+!CHANGELOG.md

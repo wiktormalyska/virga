@@ -1,0 +1,46 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC002AAA"
+        },
+        "Id": "001Dm0000AbC002AAA",
+        "Name": "Burlington Textiles Corp of America",
+        "AnnualRevenue": 350000000,
+        "IsDeleted": false,
+        "CreatedDate": "2026-10-07T21:25:17.000+0000",
+        "Description": null
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC012AAA"
+        },
+        "Id": "001Dm0000AbC012AAA",
+        "Name": "Dickenson plc",
+        "AnnualRevenue": 50000000,
+        "IsDeleted": false,
+        "CreatedDate": "2026-10-07T21:25:17.000+0000",
+        "Description": null
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC001AAA"
+        },
+        "Id": "001Dm0000AbC001AAA",
+        "Name": "Edge Communications",
+        "AnnualRevenue": 139000000,
+        "IsDeleted": false,
+        "CreatedDate": "2026-10-07T21:25:17.000+0000",
+        "Description": "Edge, founded in 1998, is a start-up based in Austin, TX. The company designs and manufactures a device to convert music from one digital format to another. Edge sells its product through retailers and its own website."
+      }
+    ],
+    "totalSize": 3,
+    "done": true
+  },
+  "warnings": []
+}

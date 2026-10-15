@@ -1,0 +1,14 @@
+{
+  "status": 0,
+  "result": {
+    "success": true,
+    "compiled": true,
+    "compileProblem": "",
+    "exceptionMessage": "",
+    "exceptionStackTrace": "",
+    "line": -1,
+    "column": -1,
+    "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: // Ctrl+S runs this in devSandbox. Close the tab to discard.\nExecute Anonymous: Integer x = 41;\nExecute Anonymous: System.debug('hello ' + (x + 1));\nExecute Anonymous: List<Account> a = [SELECT Id, Name FROM Account LIMIT 3];\nExecute Anonymous: System.debug(LoggingLevel.WARN, a.size());\nExecute Anonymous: System.debug('multi\\nline\\nmsg');\nExecute Anonymous: Map<String, Object> m = new Map<String, Object>{ 'k' => null, 'n' => 5, 'b' => true };\nExecute Anonymous: System.debug(m);\nExecute Anonymous: System.debug(a);\nExecute Anonymous: System.debug(LoggingLevel.ERROR, 'err level');\nExecute Anonymous: System.debug(LoggingLevel.INFO, 'info level');\nExecute Anonymous: System.debug(LoggingLevel.FINE, 'fine level');\n12:36:47.39 (39440921)|USER_INFO|[EXTERNAL]|005000000000001|user@example.com|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n12:36:47.39 (39466406)|EXECUTION_STARTED\n12:36:47.39 (39493379)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n12:36:47.39 (40221823)|USER_DEBUG|[3]|DEBUG|hello 42\n12:36:47.39 (56438764)|USER_DEBUG|[5]|WARN|3\n12:36:47.39 (56478716)|USER_DEBUG|[6]|DEBUG|multi\nline\nmsg\n12:36:47.39 (56595857)|USER_DEBUG|[8]|DEBUG|{b=true, k=null, n=5}\n12:36:47.39 (56700176)|USER_DEBUG|[9]|DEBUG|(Account:{Id=001Dm0000AbC001AAA, Name=Edge Communications}, Account:{Id=001Dm0000AbC002AAA, Name=Burlington Textiles Corp of America}, Account:{Id=001Dm0000AbC003AAA, Name=Pyramid Construction Inc.})\n12:36:47.39 (56714090)|USER_DEBUG|[10]|ERROR|err level\n12:36:47.39 (56722609)|USER_DEBUG|[11]|INFO|info level\n12:36:47.56 (56818273)|CUMULATIVE_LIMIT_USAGE\n12:36:47.56 (56818273)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 1 out of 100\n  Number of query rows: 3 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 0 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 0 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:47.56 (56818273)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:47.39 (56867361)|CODE_UNIT_FINISHED|execute_anonymous_apex\n12:36:47.39 (56878635)|EXECUTION_FINISHED\n"
+  },
+  "warnings": []
+}

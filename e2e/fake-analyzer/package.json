@@ -1,0 +1,14 @@
+{
+  "name": "virga-e2e-fake-analyzer",
+  "displayName": "Virga e2e analyze-on-open stand-in",
+  "description": "Test only: analyzes the file of every editor that becomes active the way Salesforce Code Analyzer's analyze-on-open does (reads it later, reports a file that is gone).",
+  "version": "0.0.1",
+  "publisher": "test",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js"
+}

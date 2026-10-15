@@ -1,0 +1,408 @@
+{
+  "AuraEnabled": {
+    "prefix": "AuraEnabled",
+    "body": "AuraEnabled",
+    "description": "@AuraEnabled: method/property callable from LWC or Aura"
+  },
+  "AuraEnabled cacheable": {
+    "prefix": "AuraEnabled",
+    "body": "AuraEnabled(cacheable=true)",
+    "description": "@AuraEnabled(cacheable=true): read-only method usable with @wire"
+  },
+  "Deprecated": {
+    "prefix": "Deprecated",
+    "body": "Deprecated",
+    "description": "@Deprecated: managed packages only"
+  },
+  "Future": {
+    "prefix": [
+      "future",
+      "Future"
+    ],
+    "body": "future",
+    "description": "@future: static void method run asynchronously (primitives only)"
+  },
+  "Future callout": {
+    "prefix": [
+      "future",
+      "Future"
+    ],
+    "body": "future(callout=true)",
+    "description": "@future(callout=true): async method that makes HTTP callouts"
+  },
+  "HttpDelete": {
+    "prefix": "HttpDelete",
+    "body": "HttpDelete",
+    "description": "@HttpDelete in a @RestResource class"
+  },
+  "HttpGet": {
+    "prefix": "HttpGet",
+    "body": "HttpGet",
+    "description": "@HttpGet in a @RestResource class"
+  },
+  "HttpPatch": {
+    "prefix": "HttpPatch",
+    "body": "HttpPatch",
+    "description": "@HttpPatch in a @RestResource class"
+  },
+  "HttpPost": {
+    "prefix": "HttpPost",
+    "body": "HttpPost",
+    "description": "@HttpPost in a @RestResource class"
+  },
+  "HttpPut": {
+    "prefix": "HttpPut",
+    "body": "HttpPut",
+    "description": "@HttpPut in a @RestResource class"
+  },
+  "InvocableMethod": {
+    "prefix": "InvocableMethod",
+    "body": "InvocableMethod(\n    label='${1:Action label}'\n    description='${2:When to use it and what it returns. Agentforce shows this as the action instructions.}'\n    category='${3:Category}'\n)",
+    "description": "@InvocableMethod: Flow / Agentforce action. One per class, List in, List out (same size and order)"
+  },
+  "InvocableMethod callout": {
+    "prefix": "InvocableMethod",
+    "body": "InvocableMethod(\n    label='${1:Action label}'\n    description='${2:When to use it and what it returns.}'\n    callout=true\n)",
+    "description": "@InvocableMethod(callout=true): action that makes HTTP callouts"
+  },
+  "InvocableVariable": {
+    "prefix": "InvocableVariable",
+    "body": "InvocableVariable(label='${1:Label}' description='${2:What the agent should pass or what this value means.}'${3: required=true})",
+    "description": "@InvocableVariable: input/output field of an invocable request/response class (public, non-static)"
+  },
+  "IsTest": {
+    "prefix": "IsTest",
+    "body": "IsTest",
+    "description": "@IsTest: test class or test method"
+  },
+  "IsTest SeeAllData": {
+    "prefix": "IsTest",
+    "body": "IsTest(SeeAllData=false)",
+    "description": "@IsTest(SeeAllData=false): default since API 24, say it explicitly if asked"
+  },
+  "IsTest IsParallel": {
+    "prefix": "IsTest",
+    "body": "IsTest(IsParallel=true)",
+    "description": "@IsTest(IsParallel=true): run in parallel (not with SeeAllData=true)"
+  },
+  "JsonAccess": {
+    "prefix": "JsonAccess",
+    "body": "JsonAccess(serializable='${1|always,never,sameNamespace,samePackage|}' deserializable='${2|always,never,sameNamespace,samePackage|}')",
+    "description": "@JsonAccess: control JSON (de)serialization of a class"
+  },
+  "NamespaceAccessible": {
+    "prefix": "NamespaceAccessible",
+    "body": "NamespaceAccessible",
+    "description": "@NamespaceAccessible: visible across packages with the same namespace"
+  },
+  "ReadOnly": {
+    "prefix": "ReadOnly",
+    "body": "ReadOnly",
+    "description": "@ReadOnly: unrestricted query rows, no DML (web services, schedulable, Visualforce)"
+  },
+  "RemoteAction": {
+    "prefix": "RemoteAction",
+    "body": "RemoteAction",
+    "description": "@RemoteAction: Visualforce JavaScript remoting"
+  },
+  "RestResource": {
+    "prefix": "RestResource",
+    "body": "RestResource(urlMapping='/${1:v1/resource}/*')",
+    "description": "@RestResource: global class exposed under /services/apexrest/..."
+  },
+  "SuppressWarnings": {
+    "prefix": "SuppressWarnings",
+    "body": "SuppressWarnings('PMD.${1:RuleName}')",
+    "description": "@SuppressWarnings('PMD.Rule'): silence a Code Analyzer rule, with a reason in a comment"
+  },
+  "TestSetup": {
+    "prefix": "TestSetup",
+    "body": "TestSetup",
+    "description": "@TestSetup: data created once per test class, rolled back per test"
+  },
+  "TestVisible": {
+    "prefix": "TestVisible",
+    "body": "TestVisible",
+    "description": "@TestVisible: private member visible to tests"
+  },
+  "return": {
+    "prefix": "return",
+    "body": "return $0;",
+    "description": "return"
+  },
+  "break": {
+    "prefix": "break",
+    "body": "break;",
+    "description": "break"
+  },
+  "continue": {
+    "prefix": "continue",
+    "body": "continue;",
+    "description": "continue"
+  },
+  "null": {
+    "prefix": "null",
+    "body": "null",
+    "description": "null"
+  },
+  "true": {
+    "prefix": "true",
+    "body": "true",
+    "description": "true"
+  },
+  "false": {
+    "prefix": "false",
+    "body": "false",
+    "description": "false"
+  },
+  "this": {
+    "prefix": "this",
+    "body": "this",
+    "description": "this"
+  },
+  "new": {
+    "prefix": "new",
+    "body": "new ",
+    "description": "new"
+  },
+  "instanceof": {
+    "prefix": "instanceof",
+    "body": "instanceof ",
+    "description": "instanceof"
+  },
+  "public": {
+    "prefix": "public",
+    "body": "public ",
+    "description": "public"
+  },
+  "private": {
+    "prefix": "private",
+    "body": "private ",
+    "description": "private"
+  },
+  "protected": {
+    "prefix": "protected",
+    "body": "protected ",
+    "description": "protected"
+  },
+  "global": {
+    "prefix": "global",
+    "body": "global ",
+    "description": "global"
+  },
+  "static": {
+    "prefix": "static",
+    "body": "static ",
+    "description": "static"
+  },
+  "final": {
+    "prefix": "final",
+    "body": "final ",
+    "description": "final"
+  },
+  "void": {
+    "prefix": "void",
+    "body": "void ",
+    "description": "void"
+  },
+  "override": {
+    "prefix": "override",
+    "body": "override ",
+    "description": "override"
+  },
+  "virtual": {
+    "prefix": "virtual",
+    "body": "virtual ",
+    "description": "virtual"
+  },
+  "abstract": {
+    "prefix": "abstract",
+    "body": "abstract ",
+    "description": "abstract"
+  },
+  "transient": {
+    "prefix": "transient",
+    "body": "transient ",
+    "description": "transient"
+  },
+  "with sharing": {
+    "prefix": [
+      "with sharing",
+      "with"
+    ],
+    "body": "with sharing ",
+    "description": "with sharing"
+  },
+  "without sharing": {
+    "prefix": [
+      "without sharing",
+      "without"
+    ],
+    "body": "without sharing ",
+    "description": "without sharing"
+  },
+  "inherited sharing": {
+    "prefix": [
+      "inherited sharing",
+      "inherited"
+    ],
+    "body": "inherited sharing ",
+    "description": "inherited sharing"
+  },
+  "implements": {
+    "prefix": "implements",
+    "body": "implements ",
+    "description": "implements"
+  },
+  "extends": {
+    "prefix": "extends",
+    "body": "extends ",
+    "description": "extends"
+  },
+  "insert": {
+    "prefix": "insert",
+    "body": "insert ${1:records};",
+    "description": "insert DML"
+  },
+  "update": {
+    "prefix": "update",
+    "body": "update ${1:records};",
+    "description": "update DML"
+  },
+  "upsert": {
+    "prefix": "upsert",
+    "body": "upsert ${1:records};",
+    "description": "upsert DML"
+  },
+  "delete": {
+    "prefix": "delete",
+    "body": "delete ${1:records};",
+    "description": "delete DML"
+  },
+  "undelete": {
+    "prefix": "undelete",
+    "body": "undelete ${1:records};",
+    "description": "undelete DML"
+  },
+  "else if": {
+    "prefix": [
+      "elseif",
+      "else if"
+    ],
+    "body": "else if (${1:condition}) {\n\t$0\n}",
+    "description": "else if"
+  },
+  "WITH USER_MODE": {
+    "prefix": [
+      "with",
+      "WITH USER_MODE",
+      "user_mode"
+    ],
+    "body": "WITH USER_MODE",
+    "description": "SOQL in user mode: sharing, CRUD and FLS of the running user (default since API 67)"
+  },
+  "WITH SYSTEM_MODE": {
+    "prefix": [
+      "with",
+      "WITH SYSTEM_MODE",
+      "system_mode"
+    ],
+    "body": "WITH SYSTEM_MODE",
+    "description": "SOQL in system mode: deliberate elevated access, say why in a comment"
+  },
+  "USER_MODE": {
+    "prefix": "USER_MODE",
+    "body": "USER_MODE",
+    "description": "after WITH: user mode"
+  },
+  "SYSTEM_MODE": {
+    "prefix": "SYSTEM_MODE",
+    "body": "SYSTEM_MODE",
+    "description": "after WITH: system mode"
+  },
+  "WITH SECURITY_ENFORCED (removed)": {
+    "prefix": "SECURITY_ENFORCED",
+    "body": "USER_MODE",
+    "description": "WITH SECURITY_ENFORCED does not compile at API 67+: inserts USER_MODE instead"
+  },
+  "insert as user": {
+    "prefix": [
+      "insert as user",
+      "insertasuser"
+    ],
+    "body": "insert as user ${1:records};",
+    "description": "DML in user mode"
+  },
+  "update as user": {
+    "prefix": [
+      "update as user",
+      "updateasuser"
+    ],
+    "body": "update as user ${1:records};",
+    "description": "DML in user mode"
+  },
+  "upsert as user": {
+    "prefix": [
+      "upsert as user",
+      "upsertasuser"
+    ],
+    "body": "upsert as user ${1:records};",
+    "description": "DML in user mode"
+  },
+  "delete as user": {
+    "prefix": [
+      "delete as user",
+      "deleteasuser"
+    ],
+    "body": "delete as user ${1:records};",
+    "description": "DML in user mode"
+  },
+  "insert as system": {
+    "prefix": [
+      "insert as system",
+      "insertassystem"
+    ],
+    "body": "insert as system ${1:records};",
+    "description": "DML in system mode (deliberate elevated access)"
+  },
+  "update as system": {
+    "prefix": [
+      "update as system",
+      "updateassystem"
+    ],
+    "body": "update as system ${1:records};",
+    "description": "DML in system mode (deliberate elevated access)"
+  },
+  "as user": {
+    "prefix": [
+      "as user",
+      "asuser"
+    ],
+    "body": "as user ",
+    "description": "user-mode modifier for DML: insert as user ..."
+  },
+  "as system": {
+    "prefix": [
+      "as system",
+      "assystem"
+    ],
+    "body": "as system ",
+    "description": "system-mode modifier for DML: update as system ..."
+  },
+  "Database user mode": {
+    "prefix": [
+      "Database.insert user",
+      "dbuser"
+    ],
+    "body": "Database.${1|insert,update,upsert,delete|}(${2:records}, ${3|false,true|}, AccessLevel.USER_MODE);",
+    "description": "Database DML with allOrNone and AccessLevel.USER_MODE (partial success, returns SaveResults)"
+  },
+  "Database.query user mode": {
+    "prefix": [
+      "Database.queryWithBinds",
+      "dbqueryuser"
+    ],
+    "body": "Database.queryWithBinds(${1:query}, new Map<String, Object>{ '${2:name}' => ${3:value} }, AccessLevel.USER_MODE);",
+    "description": "dynamic SOQL with binds in user mode"
+  }
+}

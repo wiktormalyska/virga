@@ -1,0 +1,1 @@
+SELECT Id, BillingAddress FROM Account WHERE BillingCity != null LIMIT 1

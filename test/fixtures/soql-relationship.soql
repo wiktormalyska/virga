@@ -1,0 +1,1 @@
+SELECT Id, Name, Account.Name, Account.Owner.Name, Email FROM Contact ORDER BY Name LIMIT 4

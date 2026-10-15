@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      # No sf and no VIRGA_TEST_ORG here: the org tests skip themselves, the
+      # Windows-only ones too. No dependencies to install.
+      - name: Unit tests
+        run: npm test
+
+      - name: Package
+        run: npx --yes @vscode/vsce@3 package --out virga.vsix
+
+      - name: List the files in the package
+        run: unzip -l virga.vsix
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: virga-vsix
+          path: virga.vsix
+          if-no-files-found: error

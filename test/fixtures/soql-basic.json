@@ -1,0 +1,34 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC001AAA"
+        },
+        "Id": "001Dm0000AbC001AAA",
+        "Name": "Edge Communications"
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC002AAA"
+        },
+        "Id": "001Dm0000AbC002AAA",
+        "Name": "Burlington Textiles Corp of America"
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC003AAA"
+        },
+        "Id": "001Dm0000AbC003AAA",
+        "Name": "Pyramid Construction Inc."
+      }
+    ],
+    "totalSize": 3,
+    "done": true
+  },
+  "warnings": []
+}

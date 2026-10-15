@@ -1,0 +1,14 @@
+{
+  "name": "virga-e2e-probe",
+  "displayName": "Virga e2e probe",
+  "description": "Test only: starts with VS Code and logs what any other extension sees of scratch tabs, editors and documents (the restore pass reports it).",
+  "version": "0.0.1",
+  "publisher": "test",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js"
+}

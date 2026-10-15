@@ -1,0 +1,12 @@
+vsc/
+udd/
+exts/
+exts-vsix/
+ws/
+ipc/
+shots-out/
+.cache/
+*.log
+*.jsonl
+*.txt
+e2e-out*.json

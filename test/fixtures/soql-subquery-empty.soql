@@ -1,0 +1,1 @@
+SELECT Id, Name, (SELECT Id FROM Opportunities WHERE Name = 'zzz_nonexistent_q') FROM Account ORDER BY Name LIMIT 3

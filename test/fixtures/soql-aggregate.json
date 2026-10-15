@@ -1,0 +1,80 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 2,
+        "Industry": null
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Electronics"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Consulting"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Transportation"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Construction"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 3,
+        "Industry": "Energy"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Apparel"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Hospitality"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Biotechnology"
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "cnt": 1,
+        "Industry": "Education"
+      }
+    ],
+    "totalSize": 10,
+    "done": true
+  },
+  "warnings": []
+}

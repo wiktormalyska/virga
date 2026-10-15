@@ -1,0 +1,17 @@
+{
+  "name": "fake-sf-langs",
+  "displayName": "Stand-in for the Salesforce language ids",
+  "description": "Test only: registers apex (.cls, .trigger), apex-anon (.apex) and soql (.soql) the way the Salesforce Extension Pack does, without the language servers.",
+  "version": "0.0.1",
+  "publisher": "test",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "contributes": {
+    "languages": [
+      { "id": "apex", "extensions": [".cls", ".trigger"], "aliases": ["Apex"] },
+      { "id": "apex-anon", "extensions": [".apex"], "aliases": ["Anonymous Apex"] },
+      { "id": "soql", "extensions": [".soql"], "aliases": ["SOQL"] }
+    ]
+  }
+}

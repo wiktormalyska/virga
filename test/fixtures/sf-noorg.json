@@ -1,0 +1,14 @@
+{
+  "name": "NamedOrgNotFoundError",
+  "message": "Parsing --target-org \n\tNo authorization information found for doesNotExistAlias.\nSee more help with --help",
+  "exitCode": 2,
+  "actions": [
+    "It looks like you mistyped the username or alias. Did you mean \"devSandbox\"?"
+  ],
+  "context": "Run",
+  "cause": "undefined",
+  "warnings": [],
+  "code": "NamedOrgNotFoundError",
+  "status": 2,
+  "commandName": "Run"
+}

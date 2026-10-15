@@ -1,0 +1,154 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC002AAA"
+        },
+        "Id": "001Dm0000AbC002AAA",
+        "Name": "Burlington Textiles Corp of America",
+        "Contacts": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Contact",
+                "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC006AAA"
+              },
+              "Id": "003Dm0000AbC006AAA",
+              "LastName": "Rogers"
+            }
+          ]
+        },
+        "Cases": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Case",
+                "url": "/services/data/v68.0/sobjects/Case/500Dm0000AbC018AAA"
+              },
+              "Id": "500Dm0000AbC018AAA"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC012AAA"
+        },
+        "Id": "001Dm0000AbC012AAA",
+        "Name": "Dickenson plc",
+        "Contacts": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Contact",
+                "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC011AAA"
+              },
+              "Id": "003Dm0000AbC011AAA",
+              "LastName": "Young"
+            }
+          ]
+        },
+        "Cases": null
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC001AAA"
+        },
+        "Id": "001Dm0000AbC001AAA",
+        "Name": "Edge Communications",
+        "Contacts": {
+          "totalSize": 2,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Contact",
+                "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC004AAA"
+              },
+              "Id": "003Dm0000AbC004AAA",
+              "LastName": "Forbes"
+            },
+            {
+              "attributes": {
+                "type": "Contact",
+                "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC008AAA"
+              },
+              "Id": "003Dm0000AbC008AAA",
+              "LastName": "Gonzalez"
+            }
+          ]
+        },
+        "Cases": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Case",
+                "url": "/services/data/v68.0/sobjects/Case/500Dm0000AbC019AAA"
+              },
+              "Id": "500Dm0000AbC019AAA"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v68.0/sobjects/Account/001Dm0000AbC020AAA"
+        },
+        "Id": "001Dm0000AbC020AAA",
+        "Name": "Express Logistics and Transport",
+        "Contacts": {
+          "totalSize": 2,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Contact",
+                "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC021AAA"
+              },
+              "Id": "003Dm0000AbC021AAA",
+              "LastName": "Davis"
+            },
+            {
+              "attributes": {
+                "type": "Contact",
+                "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC022AAA"
+              },
+              "Id": "003Dm0000AbC022AAA",
+              "LastName": "Levy"
+            }
+          ]
+        },
+        "Cases": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "Case",
+                "url": "/services/data/v68.0/sobjects/Case/500Dm0000AbC023AAA"
+              },
+              "Id": "500Dm0000AbC023AAA"
+            }
+          ]
+        }
+      }
+    ],
+    "totalSize": 4,
+    "done": true
+  },
+  "warnings": []
+}

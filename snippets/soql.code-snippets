@@ -1,0 +1,35 @@
+{
+  "WITH USER_MODE": {
+    "prefix": [
+      "with",
+      "WITH USER_MODE",
+      "user_mode"
+    ],
+    "body": "WITH USER_MODE",
+    "description": "SOQL in user mode: sharing, CRUD and FLS of the running user (default since API 67)"
+  },
+  "WITH SYSTEM_MODE": {
+    "prefix": [
+      "with",
+      "WITH SYSTEM_MODE",
+      "system_mode"
+    ],
+    "body": "WITH SYSTEM_MODE",
+    "description": "SOQL in system mode: deliberate elevated access, say why in a comment"
+  },
+  "USER_MODE": {
+    "prefix": "USER_MODE",
+    "body": "USER_MODE",
+    "description": "after WITH: user mode"
+  },
+  "SYSTEM_MODE": {
+    "prefix": "SYSTEM_MODE",
+    "body": "SYSTEM_MODE",
+    "description": "after WITH: system mode"
+  },
+  "WITH SECURITY_ENFORCED (removed)": {
+    "prefix": "SECURITY_ENFORCED",
+    "body": "USER_MODE",
+    "description": "WITH SECURITY_ENFORCED does not compile at API 67+: inserts USER_MODE instead"
+  }
+}

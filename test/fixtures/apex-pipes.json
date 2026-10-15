@@ -1,0 +1,14 @@
+{
+  "status": 0,
+  "result": {
+    "success": true,
+    "compiled": true,
+    "compileProblem": "",
+    "exceptionMessage": "",
+    "exceptionStackTrace": "",
+    "line": -1,
+    "column": -1,
+    "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: // Ctrl+S runs this in devSandbox. Close the tab to discard.\nExecute Anonymous: \nExecute Anonymous: System.debug('zażółć gęślą jaźń 😀 日本語');\nExecute Anonymous: System.debug('a|b|c\\n|DEBUG|x\\n  indented');\nExecute Anonymous: System.debug('');\nExecute Anonymous: System.debug('\\nstarts with newline');\nExecute Anonymous: System.debug(LoggingLevel.ERROR, 'err level');\nExecute Anonymous: System.debug(LoggingLevel.INFO, 'info level');\nExecute Anonymous: System.debug('fake\\n12:00:00.0 (1)|USER_DEBUG|[99]|DEBUG|injected');\nExecute Anonymous: System.debug(null);\n14:19:26.20 (20077456)|USER_INFO|[EXTERNAL]|005000000000001|user@example.com|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n14:19:26.20 (20106973)|EXECUTION_STARTED\n14:19:26.20 (20125351)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n14:19:26.20 (20765978)|USER_DEBUG|[3]|DEBUG|zażółć gęślą jaźń 😀 日本語\n14:19:26.20 (20782452)|USER_DEBUG|[4]|DEBUG|a&#124;b&#124;c\n&#124;DEBUG&#124;x\n  indented\n14:19:26.20 (20803453)|USER_DEBUG|[5]|DEBUG|\n14:19:26.20 (20809409)|USER_DEBUG|[6]|DEBUG|\nstarts with newline\n14:19:26.20 (20886890)|USER_DEBUG|[7]|ERROR|err level\n14:19:26.20 (20896016)|USER_DEBUG|[8]|INFO|info level\n14:19:26.20 (20901740)|USER_DEBUG|[9]|DEBUG|fake\n12:00:00.0 (1)&#124;USER_DEBUG&#124;[99]&#124;DEBUG&#124;injected\n14:19:26.20 (20911120)|USER_DEBUG|[10]|DEBUG|null\n14:19:26.20 (20986183)|CUMULATIVE_LIMIT_USAGE\n14:19:26.20 (20986183)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 0 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 0 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n14:19:26.20 (20986183)|CUMULATIVE_LIMIT_USAGE_END\n\n14:19:26.20 (21032870)|CODE_UNIT_FINISHED|execute_anonymous_apex\n14:19:26.20 (21049704)|EXECUTION_FINISHED\n"
+  },
+  "warnings": []
+}

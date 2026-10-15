@@ -1,0 +1,113 @@
+{
+  "pack": "salesforce.salesforcedx-vscode 67.26.0",
+  "extension": "salesforce.apex-language-server-extension",
+  "version": "0.10.0",
+  "snippets": [
+    {
+      "language": "apex",
+      "path": "./snippets/apex.json"
+    },
+    {
+      "language": "apex-anon",
+      "path": "./snippets/apex.json"
+    },
+    {
+      "language": "soql",
+      "path": "./snippets/soql.json"
+    },
+    {
+      "language": "apex",
+      "path": "./snippets/soql.json"
+    },
+    {
+      "language": "apex-anon",
+      "path": "./snippets/soql.json"
+    }
+  ],
+  "prefixes": {
+    "./snippets/apex.json": [
+      "class",
+      "interface",
+      "enum",
+      "debug",
+      "sysassf",
+      "sysasseq",
+      "sysassnoteq",
+      "sysassnull",
+      "sysassnotnull",
+      "dfr",
+      "dsr",
+      "fail",
+      "do",
+      "while",
+      "for",
+      "fors",
+      "forr",
+      "fori",
+      "formap",
+      "if",
+      "ifelse",
+      "else",
+      "ifnull",
+      "ifnotnull",
+      "ter",
+      "constructor",
+      "newobj",
+      "field",
+      "method",
+      "staticmethod",
+      "tryf",
+      "try",
+      "trycf",
+      "switch",
+      "throw",
+      "List",
+      "Map",
+      "mapfromrecordlist",
+      "Set",
+      "setidsfromrecordlist",
+      "@AuraEnabled",
+      "auraHandledException",
+      "testMethod",
+      "@TestSetup",
+      "customException",
+      "mockCallout",
+      "isb",
+      "isnb",
+      "localVariable",
+      "staticVariable",
+      "variable",
+      "staticFinalVariable",
+      "sd"
+    ],
+    "./snippets/soql.json": [
+      "select",
+      "selectwhere",
+      "selectorder",
+      "selectlimit",
+      "selectoffset",
+      "selectgroup",
+      "selecthaving",
+      "selectsub",
+      "selectinner",
+      "selectleft",
+      "selectagg",
+      "selectdate",
+      "selecttext",
+      "selectmath",
+      "selectcase",
+      "selectforupdate",
+      "selectallrows",
+      "dbquery",
+      "dbquerylimit",
+      "soqlstring",
+      "soqldynamic",
+      "soqlbind",
+      "soqlmultibind",
+      "soqlfor",
+      "soqlaggresult",
+      "soqlcustom",
+      "soqlrel"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "virga-e2e-driver",
+  "displayName": "Virga e2e driver",
+  "description": "Test only: runs e2e/suite inside a normal (not extension-test) VS Code window, so real dialogs can appear, then quits.",
+  "version": "0.0.1",
+  "publisher": "test",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js"
+}

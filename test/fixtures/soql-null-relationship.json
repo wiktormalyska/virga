@@ -1,0 +1,28 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Contact",
+          "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC009AAA"
+        },
+        "Id": "003Dm0000AbC009AAA",
+        "LastName": "Hart",
+        "Account": null
+      },
+      {
+        "attributes": {
+          "type": "Contact",
+          "url": "/services/data/v68.0/sobjects/Contact/003Dm0000AbC010AAA"
+        },
+        "Id": "003Dm0000AbC010AAA",
+        "LastName": "Price",
+        "Account": null
+      }
+    ],
+    "totalSize": 2,
+    "done": true
+  },
+  "warnings": []
+}

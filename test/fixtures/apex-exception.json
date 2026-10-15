@@ -1,0 +1,21 @@
+{
+  "name": "executeRuntimeFailure",
+  "message": "Execution failed at this code:\n\nSystem.MathException: Divide by 0",
+  "exitCode": 1,
+  "context": "Run",
+  "data": {
+    "success": false,
+    "compiled": true,
+    "compileProblem": "",
+    "exceptionMessage": "System.MathException: Divide by 0",
+    "exceptionStackTrace": "AnonymousBlock: line 3, column 1",
+    "line": "3",
+    "column": "1",
+    "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: System.debug('before');\nExecute Anonymous: Integer z = 0;\nExecute Anonymous: Integer i = 1 / z;\n12:36:29.21 (21439917)|USER_INFO|[EXTERNAL]|005000000000001|user@example.com|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n12:36:29.21 (21458377)|EXECUTION_STARTED\n12:36:29.21 (21470325)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n12:36:29.21 (21898172)|USER_DEBUG|[1]|DEBUG|before\n12:36:29.21 (21955048)|EXCEPTION_THROWN|[3]|System.MathException: Divide by 0\n12:36:29.21 (22091127)|FATAL_ERROR|System.MathException: Divide by 0\n\nAnonymousBlock: line 3, column 1\n12:36:29.22 (22166080)|CUMULATIVE_LIMIT_USAGE\n12:36:29.22 (22166080)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 0 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 0 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:29.22 (22166080)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:29.21 (22208413)|CODE_UNIT_FINISHED|execute_anonymous_apex\n12:36:29.21 (22214796)|EXECUTION_FINISHED\n"
+  },
+  "cause": "undefined",
+  "warnings": [],
+  "code": "executeRuntimeFailure",
+  "status": 1,
+  "commandName": "Run"
+}

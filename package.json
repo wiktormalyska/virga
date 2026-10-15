@@ -1,0 +1,448 @@
+{
+  "name": "virga",
+  "displayName": "Virga: Apex Scratch & Quick Fixes",
+  "description": "Write some Apex or SOQL, press Ctrl+S to run it, then close the tab and it's gone. Completion for local types, quick fixes and Apex snippets. Works with Salesforce CLI and the Salesforce Extension Pack.",
+  "version": "0.1.0",
+  "publisher": "wiktormalyska",
+  "author": {
+    "name": "Wiktor Małyska"
+  },
+  "license": "MIT",
+  "pricing": "Free",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#16202e",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wiktormalyska/virga.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wiktormalyska/virga/issues"
+  },
+  "homepage": "https://github.com/wiktormalyska/virga#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "apex",
+    "soql",
+    "anonymous apex",
+    "execute anonymous",
+    "salesforce",
+    "sf cli",
+    "sfdx",
+    "snippets",
+    "scratch",
+    "quick fix",
+    "completion",
+    "invocable"
+  ],
+  "activationEvents": [
+    "workspaceContains:sfdx-project.json",
+    "onLanguage:apex"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "virga.scratch.newApex",
+        "title": "New Anonymous Apex Scratch",
+        "category": "Virga",
+        "icon": "$(play)"
+      },
+      {
+        "command": "virga.scratch.newSoql",
+        "title": "New SOQL Scratch",
+        "category": "Virga",
+        "icon": "$(database)"
+      },
+      {
+        "command": "virga.scratch.run",
+        "title": "Run Scratch",
+        "category": "Virga",
+        "icon": "$(play)"
+      },
+      {
+        "command": "virga.scratch.showOutput",
+        "title": "Show Output",
+        "category": "Virga"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "virga.scratch.run",
+          "when": "resourceScheme == file && resourceFilename =~ /^scratch-[0-9]+\\.(apex|soql)$/ && resourceDirname =~ /\\.sfdx.virga-scratch$/"
+        }
+      ],
+      "editor/title/run": [
+        {
+          "command": "virga.scratch.run",
+          "when": "resourceScheme == file && resourceFilename =~ /^scratch-[0-9]+\\.(apex|soql)$/ && resourceDirname =~ /\\.sfdx.virga-scratch$/",
+          "group": "navigation@0"
+        }
+      ]
+    },
+    "keybindings": [
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      { "command": "virga.scratch.keybindingPadding" },
+      {
+        "key": "ctrl+s",
+        "mac": "cmd+s",
+        "command": "virga.scratch.run",
+        "when": "editorTextFocus && resourceScheme == file && resourceFilename =~ /^scratch-[0-9]+\\.(apex|soql)$/ && resourceDirname =~ /\\.sfdx.virga-scratch$/"
+      }
+    ],
+    "configuration": {
+      "title": "Virga",
+      "properties": {
+        "virga.scratch.timeoutSeconds": {
+          "type": "number",
+          "default": 120,
+          "minimum": 1,
+          "maximum": 86400,
+          "markdownDescription": "How long one `sf` run of a scratch may take before it is stopped (at most 86400 s, one day).",
+          "scope": "resource"
+        },
+        "virga.scratch.maxColumnWidth": {
+          "type": "number",
+          "default": 40,
+          "minimum": 4,
+          "markdownDescription": "Widest column of a SOQL result table; longer values end with `…`.",
+          "scope": "resource"
+        },
+        "virga.scratch.clearOutputOnRun": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Clear the **Virga** output before every run. Off keeps earlier results above the new one.",
+          "scope": "resource"
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[apex-anon]": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 100,
+        "files.autoSaveWhenNoErrors": false,
+        "files.autoSaveWorkspaceFilesOnly": false
+      },
+      "[soql]": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 100,
+        "files.autoSaveWhenNoErrors": false,
+        "files.autoSaveWorkspaceFilesOnly": false
+      }
+    },
+    "languages": [
+      {
+        "id": "apex-anon",
+        "extensions": [
+          ".apex"
+        ]
+      },
+      {
+        "id": "soql",
+        "extensions": [
+          ".soql"
+        ]
+      },
+      {
+        "id": "virga-output",
+        "aliases": [
+          "Virga Output"
+        ],
+        "mimetypes": [
+          "text/x-code-output"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "virga-output",
+        "scopeName": "source.virga-output",
+        "path": "./syntaxes/virga-output.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "apex",
+        "path": "./snippets/apex.code-snippets"
+      },
+      {
+        "language": "soql",
+        "path": "./snippets/soql.code-snippets"
+      }
+    ]
+  },
+  "vsce": {
+    "dependencies": false
+  },
+  "scripts": {
+    "test": "node test/run.js",
+    "e2e": "powershell -NoProfile -ExecutionPolicy Bypass -File e2e/e2e.ps1",
+    "e2e:vsix": "powershell -NoProfile -ExecutionPolicy Bypass -File e2e/e2e.ps1 -FromVsix",
+    "screenshots": "powershell -NoProfile -ExecutionPolicy Bypass -File e2e/e2e.ps1 -Screenshots",
+    "package": "npx --yes @vscode/vsce@3 package"
+  }
+}

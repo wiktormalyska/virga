@@ -1,0 +1,1 @@
+SELECT Id, LastName, Account.Owner.Name, ReportsTo.Name, ReportsTo.Account.Name FROM Contact ORDER BY ReportsToId NULLS FIRST LIMIT 4

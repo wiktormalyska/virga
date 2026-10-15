@@ -1,0 +1,15 @@
+{
+  "name": "MALFORMED_QUERY",
+  "message": "\nSELECT Id FROM Account,\n                      ^\nERROR at Row:1:Column:23\nunexpected token: '<EOF>'",
+  "exitCode": 1,
+  "context": "DataSoqlQueryCommand",
+  "data": {
+    "message": "\nSELECT Id FROM Account,\n                      ^\nERROR at Row:1:Column:23\nunexpected token: '<EOF>'",
+    "errorCode": "MALFORMED_QUERY"
+  },
+  "cause": "(stack trace removed)",
+  "warnings": [],
+  "code": "1",
+  "status": 1,
+  "commandName": "DataSoqlQueryCommand"
+}

@@ -34,16 +34,29 @@ public before the Marketplace shows the page.
 
 ## 3. Visual Studio Marketplace publisher (first release only)
 
-Personal access tokens for the Marketplace stop working on 2026-12-01, so
-publish with a Microsoft Entra ID sign-in instead of a PAT.
-
-- [ ] Sign in at <https://marketplace.visualstudio.com/manage> with the
+- [x] Sign in at <https://marketplace.visualstudio.com/manage> with the
       Microsoft account that will own the extension.
-- [ ] Create the publisher with ID `WiktorMayska` (done 2026-10-15; IDs cannot be changed, it must match `publisher` in
-      `package.json`), display name `Wiktor Małyska`.
-- [ ] Make sure the same Entra ID identity is a member of the publisher with
-      the Owner or Contributor role.
-- [ ] Install the Azure CLI and run `az login` with that identity.
+- [x] Create the publisher with ID `WiktorMayska` (done 2026-10-15; IDs cannot
+      be changed, it must match `publisher` in `package.json`), display name
+      `Wiktor Małyska`.
+
+How 0.1.0 was published (2026-10-16): the publisher belongs to a personal
+Microsoft account with no Entra ID tenant, so `az login --allow-no-subscriptions`
+ends with an empty list (`[]`) and `vsce publish --azure-credential` cannot get
+a token. Azure CLI 2.91 also crashes in its tenant picker
+(`_subscription_selector.py`, `'NoneType' object has no attribute 'get'`)
+unless `az config set core.login_experience_v2=off` is set first. The Azure
+DevOps organization showed no way to create a global PAT, and global PATs stop
+working on 2026-12-01 anyway. What works without any token: upload the `.vsix`
+on the publisher page (**+ New extension → Visual Studio Code** for the first
+version, **Update** on the extension for later ones). Verification took a few
+minutes, then the item page and `code --install-extension WiktorMayska.virga`
+needed another few minutes before they found it.
+
+CLI publishing needs an Entra ID identity that is a member of the publisher
+(Owner or Contributor), for example a free Entra ID tenant or an Azure
+Pipelines / GitHub Actions workload identity, then `az login` and
+`vsce publish --azure-credential`.
 
 ## 4. Open VSX namespace (first release only)
 
@@ -57,8 +70,13 @@ publish with a Microsoft Entra ID sign-in instead of a PAT.
 ## 5. Publish
 
 - [ ] `npx --yes @vscode/vsce@3 package` → `virga-<version>.vsix`
-- [ ] `npx --yes @vscode/vsce@3 publish --packagePath virga-<version>.vsix --azure-credential`
-- [ ] `npx --yes ovsx publish virga-<version>.vsix -p <token>`
+- [ ] Marketplace: upload the `.vsix` on
+      <https://marketplace.visualstudio.com/manage/publishers/WiktorMayska>
+      (**Update** on the extension), or with an Entra ID identity:
+      `npx --yes @vscode/vsce@3 publish --packagePath virga-<version>.vsix --azure-credential`
+- [ ] Open VSX: `npx --yes ovsx publish virga-<version>.vsix` with the token in
+      the `OVSX_PAT` environment variable (keep it off the command line, where
+      it lands in the process list and shell history)
 - [ ] Tag the release: `git tag -a v<version> -m "Virga <version>"` and
       `git push origin v<version>` (the first one is `v0.1.0`).
 - [ ] GitHub release for the tag with the `.vsix` attached and the

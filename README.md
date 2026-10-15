@@ -7,10 +7,19 @@ Salesforce CLI and the Salesforce Extension Pack.
 *Virga* is rain that evaporates before it reaches the ground. The code you try
 out in a scratch never lands in your project either.
 
-- [Features](#features)
+- [Install](#install) · [Features](#features)
 - [Keyboard shortcuts](#keyboard-shortcuts) · [Commands](#commands) · [Settings](#settings)
 - [Requirements](#requirements) · [Privacy](#privacy) · [Known limitations](#known-limitations) · [FAQ](#faq)
 - [Contributing](#contributing) · [License](#license)
+
+## Install
+
+- VS Code: [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=WiktorMayska.virga),
+  or `code --install-extension WiktorMayska.virga`
+- Cursor, VSCodium, Windsurf and other Open VSX editors:
+  [Open VSX](https://open-vsx.org/extension/WiktorMayska/virga)
+- Any VS Code build: the `.vsix` from [GitHub Releases](https://github.com/wiktormalyska/virga/releases),
+  then **Extensions: Install from VSIX...**
 
 ## Features
 

@@ -4,6 +4,12 @@ All notable changes to Virga are listed here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow
 [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-10-16
+
+### Changed
+
+- Shorter, simpler description on the Marketplace and Open VSX.
+
 ## [0.1.0] - 2026-10-15
 
 Initial release.

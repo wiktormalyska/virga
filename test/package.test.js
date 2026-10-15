@@ -21,8 +21,8 @@ test('manifest: identity, links and marketplace fields', () => {
   assert.equal(pkg.name, 'virga');
   assert.equal(`${pkg.publisher}.${pkg.name}`, 'WiktorMayska.virga');
   assert.equal(pkg.displayName, 'Virga: Apex Scratch & Quick Fixes');
-  assert.equal(pkg.description, "Write some Apex or SOQL, press Ctrl+S to run it, then close the tab and it's gone. Completion for local types, quick fixes and Apex snippets. Works with Salesforce CLI and the Salesforce Extension Pack.");
-  assert.equal(pkg.version, '0.1.0');
+  assert.equal(pkg.description, "Run Apex and SOQL from a scratch tab with Ctrl+S. Plus local type completion, quick fixes and snippets.");
+  assert.equal(pkg.version, '0.1.1');
   assert.equal(pkg.license, 'MIT');
   assert.equal(pkg.author.name, 'Wiktor Małyska');
   assert.equal(pkg.repository.url, 'https://github.com/wiktormalyska/virga.git');
@@ -44,9 +44,9 @@ test('manifest: trademark rules for the name and tagline', () => {
     assert.ok(!new RegExp(word, 'i').test(pkg.displayName), `displayName has "${word}"`);
     assert.ok(!new RegExp(word, 'i').test(pkg.name), `name has "${word}"`);
   }
-  const refs = pkg.description.match(/Salesforce \w+/g) || [];
-  assert.deepEqual(refs, ['Salesforce CLI', 'Salesforce Extension'], 'only "works with" references');
-  assert.ok(pkg.description.endsWith(' Works with Salesforce CLI and the Salesforce Extension Pack.'));
+  // "Salesforce" may appear only inside a "Works with ..." sentence (a plain reference), or not at all.
+  const outsideWorksWith = pkg.description.replace(/\bWorks with [^.]*\./g, '');
+  assert.ok(!/salesforce/i.test(outsideWorksWith), 'Salesforce only as a "works with" reference');
 });
 
 test('manifest: activation stays lazy (a Salesforce DX workspace or an Apex file, commands implicit)', () => {

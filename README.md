@@ -1,8 +1,7 @@
 # Virga: Apex Scratch & Quick Fixes
 
-Write some Apex or SOQL, press **Ctrl+S** to run it, then close the tab and it's
-gone. Completion for local types, quick fixes and Apex snippets. Works with
-Salesforce CLI and the Salesforce Extension Pack.
+Run Apex and SOQL from a scratch tab with **Ctrl+S**. Plus local type completion,
+quick fixes and snippets. Works with Salesforce CLI and the Salesforce Extension Pack.
 
 *Virga* is rain that evaporates before it reaches the ground. The code you try
 out in a scratch never lands in your project either.

@@ -791,7 +791,7 @@ test('package.json: manifest fields, commands registered, files shipped', () => 
   assert.equal(pkg.name, 'virga');
   assert.equal(pkg.displayName, 'Virga: Apex Scratch & Quick Fixes');
   assert.equal(pkg.publisher, 'WiktorMayska');
-  assert.equal(pkg.version, '0.1.0');
+  assert.equal(pkg.version, '0.1.1');
   assert.equal(pkg.engines.vscode, '^1.90.0');
   assert.equal(pkg.main, './extension.js');
   assert.equal(pkg.license, 'MIT');
